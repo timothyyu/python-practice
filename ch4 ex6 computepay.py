@@ -1,13 +1,17 @@
-#Excercise 6, Ch. 4 Pg. 55, Python For Informatics v3
+# Excercise 6, Ch. 4 Pg. 55, Python For Informatics v3
 
-#"Rewrite your pay computation with time-and-a-half for overtime and
-#create a function called computepay which takes two parameters (hours and rate)"
+# "Rewrite your pay computation with time-and-a-half for overtime and
+# create a function called computepay which takes two parameters (hours and rate)"
 
 inputloop = True
 while inputloop is True:
     try:
         hours = float(input("Enter hours:"))
+        if hours <= 0:
+            print("Please enter an hour value above zero.")
+            continue
         rate = float(input("Enter pay rate per hour:"))
+        running = False
         break
     except:
         print("Please enter a numerical value for hours/rate.")
@@ -24,20 +28,20 @@ def computepay (hours, rate):
 
 print("Pay: $", round(computepay(hours, rate),2))
 
-#Bugs/issues to be addressed in future versions:
-    #Compliance: https://www.dol.gov/whd/regs/compliance/whdfs53.htm
+# Bugs/issues to be addressed in future versions:
+    # Compliance: https://www.dol.gov/whd/regs/compliance/whdfs53.htm
         #employee time from 1 to 7 minutes may be rounded down
         #employee time from 8 to 14 minutes must be rounded up
-    #Functions: Automatic deduction of 30 minutes meal time per day for 7.5+ shift
-    #If final pay beyond 0.00x decimal place, round up if >= 5
+    # Functions: Automatic deduction of 30 minutes meal time per day for 7.5+ shift
+    # If final pay beyond 0.00x decimal place, round up if >= 5
         #Round down if <5, though.
         #!!!!!!!can be accomplished with  print(round(computepay(hours, rate)2))
             #But how can I calcuate this myself (If I wanted to?)
-    #Final pay output formatting (when no cents/when only cents in decimal place
-    #Potential to have the inputloop section be a defined function?
+    # Final pay output formatting (when no cents/when only cents in decimal place
+    # Potential to have the inputloop section be a defined function?
         #What about multiple inputs? How would that be handled?
 
-###Test inputloop function based on observation of program flow:
+### Test inputloop function based on observation of program flow:
 
 # def inputloop (prompt,type):
 #     #user input is returned
