@@ -14,18 +14,16 @@ while inputloop is True:
         elif wholeint < -1000:
             print("Entered INT is <-1000. Please Try again.")
             continue
-        if wholeint < 0:
+        if wholeint <0:
             isNegative = True
             wholeint = abs(wholeint)
-        elif wholeint >= 0:
+        elif wholeint >0:
             isNegative = False
         running = False
         break
     except ValueError:
         print ("ERROR: You did not enter a whole int")
         print ("Please try again:")
-
-
 
 if isNegative == True:
     # convert to string to get negative sign right next to number
@@ -108,26 +106,26 @@ if wholeint == 1000:
 elif wholeint >= 101:
     numword = above101(wholeint)
 
-# isNegative flag and abs() function to add "Negative" to negative input
+# isNegative flag and abs() function to add "Negative" to negative input print statement
 if isNegative == True:
     print("Number in written form:"," Negative", numword)
 elif isNegative == False:
     print("Number in written form:", numword)
 
 #To implement:
-    #  design for -1 and negative input [DONE]
+    # design for -1 and negative input [DONE]
     # rewrite definitions to be easier to understand
     # see if there a better way to structure control logic starting with
         # if wholeint <= 99:
     # Change output to be more readable, i.e. 100 in written form is x
     # You entered statement negative symbol added [DONE]
-    # Updated comments on lower program flow [DONE]
+
 # Issues:
     # Final output has a space/few extra spaces left side of "You Entered:" [FIXED]
     # -1000 output error: Entered INT is <-1000. Please Try again. [FIXED]
     # negative input not showing in "you entered" [FIXED]
-    # Fixed "You entered:" output by convert to string (placed in temp variable)[FIXED]
+    # "You entered:" output by convert to string (placed in temp variable) [FIXED]
+    # Updated comments on lower program flow
     # Print statement left space "You Entered" [FIXED]
-    # 0 input ---> program exits [FIXED]
 
 
