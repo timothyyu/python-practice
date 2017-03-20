@@ -14,16 +14,18 @@ while inputloop is True:
         elif wholeint < -1000:
             print("Entered INT is <-1000. Please Try again.")
             continue
-        if wholeint <0:
+        if wholeint < 0:
             isNegative = True
             wholeint = abs(wholeint)
-        elif wholeint >0:
+        elif wholeint >= 0:
             isNegative = False
         running = False
         break
     except ValueError:
         print ("ERROR: You did not enter a whole int")
         print ("Please try again:")
+
+
 
 if isNegative == True:
     # convert to string to get negative sign right next to number
@@ -118,13 +120,14 @@ elif isNegative == False:
     # see if there a better way to structure control logic starting with
         # if wholeint <= 99:
     # Change output to be more readable, i.e. 100 in written form is x
+    # You entered statement negative symbol added [DONE]
+    # Updated comments on lower program flow [DONE]
 # Issues:
     # Final output has a space/few extra spaces left side of "You Entered:" [FIXED]
     # -1000 output error: Entered INT is <-1000. Please Try again. [FIXED]
     # negative input not showing in "you entered" [FIXED]
-    # Fixed "You entered:" output by convert to string (placed in temp variable)
-    # You entered statement negative symbol added
-    # Updated comments on lower program flow
-    # Print statement left effor space fixed
+    # Fixed "You entered:" output by convert to string (placed in temp variable)[FIXED]
+    # Print statement left space "You Entered" [FIXED]
+    # 0 input ---> program exits [FIXED]
 
 
