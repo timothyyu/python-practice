@@ -76,35 +76,37 @@ def above101(wholeint):
 
 ###############################################
 
-if wholeint <= 99:
-    if wholeint <20:
-        numword = dict1[wholeint]
-    elif wholeint == 20:
-        numword = dict1[wholeint]
-    elif wholeint == 30:
-        numword = dict1[wholeint]
-    elif wholeint == 40:
-        numword = dict1[wholeint]
-    elif wholeint == 50:
-        numword = dict1[wholeint]
-    elif wholeint == 60:
-        numword = dict1[wholeint]
-    elif wholeint == 70:
-        numword = dict1[wholeint]
-    elif wholeint == 80:
-        numword = dict1[wholeint]
-    elif wholeint == 90:
-        numword = dict1[wholeint]
-# For non multiples of 10 that are under <99:
-    elif wholeint >=21:
-        numword= under100(wholeint)
-# 100 and above:
-if wholeint == 100:
-    numword = dict1[1] +" " + dict2[wholeint]
 if wholeint == 1000:
     numword = dict1[1]+ " "+ dict2[wholeint]
 elif wholeint >= 101:
     numword = above101(wholeint)
+elif wholeint == 100:
+    numword = dict1[1] +" " + dict2[wholeint]
+elif wholeint <20 or wholeint <=99 and not wholeint >=21:
+    numword = dict1[wholeint]
+elif wholeint >=21:
+    numword= under100(wholeint)
+
+#Commented out swath of if/elif that is replaced by the above
+# if wholeint <= 99:
+#     if wholeint <20:
+#         numword = dict1[wholeint]
+#     elif wholeint == 20:
+#         numword = dict1[wholeint]
+#     elif wholeint == 30:
+#         numword = dict1[wholeint]
+#     elif wholeint == 40:
+#         numword = dict1[wholeint]
+#     elif wholeint == 50:
+#         numword = dict1[wholeint]
+#     elif wholeint == 60:
+#         numword = dict1[wholeint]
+#     elif wholeint == 70:
+#         numword = dict1[wholeint]
+#     elif wholeint == 80:
+#         numword = dict1[wholeint]
+#     elif wholeint == 90:
+#         numword = dict1[wholeint]
 
 # isNegative flag and abs() function to add "Negative" to negative input print statement
 if isNegative == True:
@@ -119,6 +121,7 @@ elif isNegative == False:
         # if wholeint <= 99:
     # Change output to be more readable, i.e. 100 in written form is x
     # You entered statement negative symbol added [DONE]
+    # Control flow idea: use a for/while loop for wholeint <= 99
 
 # Issues:
     # Final output has a space/few extra spaces left side of "You Entered:" [FIXED]
