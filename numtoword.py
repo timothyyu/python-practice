@@ -1,6 +1,6 @@
-#Python programming challenge:
-#Write a program that can take input
-#in the form of WHOLE integers 1 to 1000, and outputs them as words
+# Python programming challenge:
+# Write a program that can take input
+# in the form of WHOLE integers 1 to 1000, and outputs them as words
 
 inputloop = True
 isNegative = None
@@ -26,8 +26,8 @@ while inputloop is True:
         print ("Please try again:")
 
 if isNegative == True:
-    #convert to string to get negative sign right next to number
-    #Use temp variable to not disrupt program flow
+    # convert to string to get negative sign right next to number
+    # Use temp variable to not disrupt program flow
     tempwholeint = str(wholeint)
     print("Whole INT entered succesfully.\nYou entered:","-"+ tempwholeint)
 elif isNegative == False:
@@ -50,9 +50,9 @@ def round_down(num, divisor):
     return num - (num%divisor)
 def under100 (wholeint):
     # ex47
-    #x = the number under 99 minus the tens place
-    #40 and 7 --> 47 round down to 40 which will be x
-    #need function to round down to 10
+    # x = the number under 99 minus the tens place
+    # 40 and 7 --> 47 round down to 40 which will be x
+    # need function to round down to 10
     x = round_down(wholeint,10)
     wholeintm = wholeint - x
     if x <= 0:
@@ -64,7 +64,7 @@ def under100 (wholeint):
     return numword
 
 def above101(wholeint):
-    #ex 451
+    # ex 451
     x = round_down(wholeint, 100)
     y = x/100
     tensleft = wholeint - x
@@ -95,10 +95,10 @@ if wholeint <= 99:
         numword = dict1[wholeint]
     elif wholeint == 90:
         numword = dict1[wholeint]
-#For non multiples of 10 that are under <99:
+# For non multiples of 10 that are under <99:
     elif wholeint >=21:
         numword= under100(wholeint)
-#100 and above:
+# 100 and above:
 if wholeint == 100:
     numword = dict1[1] +" " + dict2[wholeint]
 if wholeint == 1000:
@@ -106,21 +106,25 @@ if wholeint == 1000:
 elif wholeint >= 101:
     numword = above101(wholeint)
 
-#isNegative flag and abs() function to add "Negative" to negative input
+# isNegative flag and abs() function to add "Negative" to negative input
 if isNegative == True:
     print("Number in written form:"," Negative", numword)
 elif isNegative == False:
     print("Number in written form:", numword)
 
 #To implement:
-    #design for -1 and negative input [DONE]
-    #rewrite definitions to be easier to understand
-    #see if there a better way to structure control logic starting with
-        #if wholeint <= 99:
-    #Change output to be more readable, i.e. 100 in written form is x
-#Issues:
-    #Final output has a space/few extra spaces left side of "You Entered:" [FIXED]
-    #-1000 output error: Entered INT is <-1000. Please Try again. [FIXED]
+    #  design for -1 and negative input [DONE]
+    # rewrite definitions to be easier to understand
+    # see if there a better way to structure control logic starting with
+        # if wholeint <= 99:
+    # Change output to be more readable, i.e. 100 in written form is x
+# Issues:
+    # Final output has a space/few extra spaces left side of "You Entered:" [FIXED]
+    # -1000 output error: Entered INT is <-1000. Please Try again. [FIXED]
     # negative input not showing in "you entered" [FIXED]
+    # Fixed "You entered:" output by convert to string (placed in temp variable)
+    # You entered statement negative symbol added
+    # Updated comments on lower program flow
+    # Print statement left effor space fixed
 
 
