@@ -7,10 +7,11 @@ inputloop = True
 while inputloop is True:
     try:
         hours = float(input("Enter hours:"))
-        if hours <= 0:
-            print("Please enter an hour value above zero.")
-            continue
         rate = float(input("Enter pay rate per hour:"))
+        if hours <= 0 or rate <= 0:
+            print("An hour and rate value above zero must be entered to calculate pay.")
+            continue
+        # For future commits: There is a better way to obtain and parse user input
         running = False
         break
     except:
