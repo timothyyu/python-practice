@@ -9,9 +9,9 @@ while inputloop is True:
         hours = float(input("Enter hours:"))
         rate = float(input("Enter pay rate per hour:"))
         if hours <= 0 or rate <= 0:
-            print("An hour and rate value above zero must be entered to calculate pay.")
+            print("Both hour & rate values entered must be above 0 to calculate pay.")
             continue
-        # For future commits: There is a better way to obtain and parse user input
+        # For future commits: There is a better way to obtain and parse user input.
         running = False
         break
     except:
@@ -29,18 +29,21 @@ def computepay (hours, rate):
 
 print("Pay: $", round(computepay(hours, rate),2))
 
-# Bugs/issues to be addressed in future versions:
-    # Compliance: https://www.dol.gov/whd/regs/compliance/whdfs53.htm
-        #employee time from 1 to 7 minutes may be rounded down
-        #employee time from 8 to 14 minutes must be rounded up
-    # Functions: Automatic deduction of 30 minutes meal time per day for 7.5+ shift
-    # If final pay beyond 0.00x decimal place, round up if >= 5
-        #Round down if <5, though.
-        #!!!!!!!can be accomplished with  print(round(computepay(hours, rate)2))
+## To implement:
+    # If final pay beyond 0.00x decimal place, round up if >= 5 [DONE]
+        # Round down if <5, though.
+        # Can be accomplished with  print(round(computepay(hours, rate)2))
             #But how can I calcuate this myself (If I wanted to?)
-    # Final pay output formatting (when no cents/when only cents in decimal place
+    # Functions: Automatic deduction of 30 minutes meal time per day for 7.5+ shift
+## Bugs:
+    # Final pay output formatting (when no cents/when only cents in decimal place) + location of dollar sign
+
+## Not implmented yet:
+    # Compliance: https://www.dol.gov/whd/regs/compliance/whdfs53.htm
+    # employee time from 1 to 7 minutes may be rounded down
+    # employee time from 8 to 14 minutes must be rounded up
     # Potential to have the inputloop section be a defined function?
-        #What about multiple inputs? How would that be handled?
+        # What about multiple inputs? How would that be handled?
 
 ### Test inputloop function based on observation of program flow:
 
