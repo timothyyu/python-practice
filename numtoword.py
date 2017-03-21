@@ -14,10 +14,13 @@ while inputloop is True:
         elif wholeint < -1000:
             print("Entered INT is <-1000. Please Try again.")
             continue
-        if wholeint <0:
+        if wholeint == -0:
+            print("Negative 0 is not a valid integer. Please Try again.")
+            continue
+        elif wholeint <0:
             isNegative = True
             wholeint = abs(wholeint)
-        elif wholeint >0:
+        elif wholeint >=0:
             isNegative = False
         running = False
         break
@@ -82,7 +85,7 @@ elif wholeint >= 101:
     numword = above101(wholeint)
 elif wholeint == 100:
     numword = dict1[1] +" " + dict2[wholeint]
-elif wholeint <20 or wholeint <=99 and not wholeint >=21:
+elif wholeint <20: #or wholeint <=99 and not wholeint >=21: #Note: This line may be redundant as a limiter
     numword = dict1[wholeint]
 elif wholeint >=21:
     numword= under100(wholeint)
@@ -117,11 +120,12 @@ elif isNegative == False:
 #To implement:
     # design for -1 and negative input [DONE]
     # rewrite definitions to be easier to understand
-    # see if there a better way to structure control logic starting with
+    # Control flow idea: use a for/while loop for wholeint <= 99 [IN PROGRESS]
+        # see if there a better way to structure control logic starting with
         # if wholeint <= 99:
     # Change output to be more readable, i.e. 100 in written form is x
     # You entered statement negative symbol added [DONE]
-    # Control flow idea: use a for/while loop for wholeint <= 99
+
 
 # Issues:
     # Final output has a space/few extra spaces left side of "You Entered:" [FIXED]
@@ -130,5 +134,6 @@ elif isNegative == False:
     # "You entered:" output by convert to string (placed in temp variable) [FIXED]
     # Updated comments on lower program flow
     # Print statement left space "You Entered" [FIXED]
+    # 0 input ---> incorrect/no output [FIXED]
 
 
