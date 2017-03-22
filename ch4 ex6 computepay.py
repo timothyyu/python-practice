@@ -23,20 +23,25 @@ def computepay (hours, rate):
         otrate = (rate * 1.5)
         otpay = othours * otrate
         pay = ((hours - othours) * (rate)) + otpay
-    elif hours < 40:
+    elif hours <= 40:
         pay = hours * rate
     return pay
 
-print("Pay: $", round(computepay(hours, rate),2))
+pay = round(computepay(hours, rate),2)
+pay = str(pay)
+print("Pay : $" + pay.strip())
+
 
 ## To implement:
     # If final pay beyond 0.00x decimal place, round up if >= 5 [DONE]
-        # Round down if <5, though.
+        # Round down if <5, though. [DONE - should work with round() function]
         # Can be accomplished with  print(round(computepay(hours, rate)2))
             #But how can I calcuate this myself (If I wanted to?)
     # Functions: Automatic deduction of 30 minutes meal time per day for 7.5+ shift
+        #more precision needed for daily entry of hours (in order to accurately calculate
 ## Bugs:
-    # Final pay output formatting (when no cents/when only cents in decimal place) + location of dollar sign
+    # Final pay output formatting (when no cents/when only cents in decimal place)
+    # location of dollar sign [FIXED]
 
 ## Not implmented yet:
     # Compliance: https://www.dol.gov/whd/regs/compliance/whdfs53.htm
@@ -44,6 +49,7 @@ print("Pay: $", round(computepay(hours, rate),2))
     # employee time from 8 to 14 minutes must be rounded up
     # Potential to have the inputloop section be a defined function?
         # What about multiple inputs? How would that be handled?
+        # A better/multiple input function is needed for more complex calcuations
 
 ### Test inputloop function based on observation of program flow:
 
