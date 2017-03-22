@@ -49,21 +49,22 @@ dict2 = { 100:'Hundred', 1000: 'Thousand',}
 
 ###############################################
 
-def round_down(num, divisor):
-    return num - (num%divisor)
+def round_down(num, divisor):   # 47, 10
+    return num - (num%divisor)  #47 - (40%10) ---> 47 - (7) ---> 40
 def under100 (wholeint):
     # ex47
     # x = the number under 99 minus the tens place
+    # wholeintm is literally the part that doesnt neatly round down
     # 40 and 7 --> 47 round down to 40 which will be x
     # need function to round down to 10
-    x = round_down(wholeint,10)
-    wholeintm = wholeint - x
-    if x <= 0:
-        numword = dict1[wholeintm]
-    elif wholeintm == 0:
+    x = round_down(wholeint,10)     # 47 ---> x = 40
+    wholeintm = wholeint - x        # 47-40 = 7 ----> wholeintm = 7
+    if x <= 0:                      # if 40 is <= 0
+        numword = dict1[wholeintm]  # does not execute, 40 isn't <=0
+    elif wholeintm == 0:            # does not execute, 7 isn't equal to 0
         numword = dict1[x]
-    elif x > 0:
-        numword = dict1[x] + '-' + dict1[wholeintm]
+    elif x > 0:                     # 40 > 0 is true, next line executes:
+        numword = dict1[x] + '-' + dict1[wholeintm] #pass x and wholeintm (40, 7) into string variable
     return numword
 
 def above101(wholeint):
@@ -123,6 +124,7 @@ elif isNegative == False:
     # Control flow idea: use a for/while loop for wholeint <= 99 [IN PROGRESS]
         # see if there a better way to structure control logic starting with
         # if wholeint <= 99:
+        # Add comments on definitions [IN PROGRESS]
     # Change output to be more readable, i.e. 100 in written form is x
     # You entered statement negative symbol added [DONE]
 
