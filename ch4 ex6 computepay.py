@@ -25,12 +25,11 @@ def computepay (hours, rate):
         pay = ((hours - othours) * (rate)) + otpay
     elif hours <= 40:
         pay = hours * rate
+    pay = round(pay, 2)     #moved round(), str() conversion, and strip() into func.
+    pay = str(pay).strip()
     return pay
 
-pay = round(computepay(hours, rate),2)
-pay = str(pay)
-print("Pay : $" + pay.strip())
-
+print("Pay : $" + computepay(hours,rate))
 
 ## To implement:
     # If final pay beyond 0.00x decimal place, round up if >= 5 [DONE]
