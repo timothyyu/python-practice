@@ -64,18 +64,18 @@ def under100 (wholeint):
     elif wholeintm == 0:            # does not execute, 7 isn't equal to 0
         numword = dict1[x]
     elif x > 0:                     # 40 > 0 is true, next line executes:
-        numword = dict1[x] + '-' + dict1[wholeintm] #pass x and wholeintm (40, 7) into string variable
+        numword = dict1[x] + '-' + dict1[wholeintm] #pass x and wholeintm (40, 7) into string
     return numword
 
 def above101(wholeint):
     # ex 451
-    x = round_down(wholeint, 100)
-    y = x/100
-    tensleft = wholeint - x
-    if tensleft == 0:
+    x = round_down(wholeint, 100) #4 51 ----> 450 - (450%100) ---> 450-50 = 400
+    y = x/100 # 400/100 = 4
+    tensleft = wholeint - x # 451-400= 51
+    if tensleft == 0: # tensleft =! 0 in this case (tensleft = 51)
         numword = dict1[y] + " " + dict2[100]
-    else:
-        numword = dict1[y] +" "+ dict2[100] +" and " + under100(tensleft)
+    else:         #y=4          # hundred dict ref.    #51 passed to under100()
+        numword = dict1[y] +" "+ dict2[100] +" and " + under100(tensleft) #pass y + tensleft result into string
     return numword
 
 ###############################################
