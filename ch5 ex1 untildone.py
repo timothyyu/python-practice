@@ -10,7 +10,7 @@ inputloop = True
 while inputloop is True:
     try:
         number=input("Enter a number:")
-        if number == "done":
+        if number == "done" or number == "Done":
             break
         number = int(number)
         lst.append(number)
@@ -19,5 +19,5 @@ while inputloop is True:
         continue
 avg = sum(lst) / len(lst)
 
-print (sum(lst),len(lst), avg)
+print (sum(lst),len(lst), avg) # sum, number of inputs, average
 
