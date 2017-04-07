@@ -18,6 +18,6 @@ while inputloop is True:
         print("Invalid input")
         continue
 avg = sum(lst) / len(lst)
-
-print (sum(lst),len(lst), avg) # sum, number of inputs, average
+print ("Numbers entered: ", lst)
+print ("Sum, count of numbers entered, average: ", sum(lst),",",len(lst),",", avg) # sum, number of inputs, average
 
