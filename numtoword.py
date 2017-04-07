@@ -72,7 +72,7 @@ def above101(wholeint):
     y = x/100 # 400/100 = 4
     tensleft = wholeint - x # 451-400= 51
     if tensleft == 0: # tensleft =! 0 in this case (tensleft = 51)
-        numword = dict1[y] + " " + dict2[100]
+        numword = dict1[y] + " " + dict1[100]
     else:         #y=4          # hundred dict ref.    #51 passed to under100()
         numword = dict1[y] +" "+ dict1[100] +" and " + under100(tensleft) #pass y + tensleft result into string
     return numword
