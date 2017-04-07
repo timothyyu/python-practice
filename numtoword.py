@@ -50,7 +50,7 @@ dict2 = { 100:'Hundred', 1000: 'Thousand',}
 ###############################################
 
 def round_down(num, divisor):   # 47, 10
-    return num - (num%divisor)  #47 - (40%10) ---> 47 - (7) ---> 40
+    return num - (num%divisor)  #47 - (47%10) ---> 47 - (7) ---> 40
 def under100 (wholeint):
     # ex47
     # x = the number under 99 minus the tens place
