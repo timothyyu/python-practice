@@ -114,18 +114,18 @@ elif wholeint >=21:
 
 # isNegative flag and abs() function to add "Negative" to negative input print statement
 if isNegative == True:
-    print("Number in written form:"," Negative", numword)
+    print(wholeint, "in written form is:","Negative", numword)
 elif isNegative == False:
-    print("Number in written form:", numword)
+    print(wholeint, "in written form is:", numword)
 
 #To implement:
     # design for -1 and negative input [DONE]
-    # rewrite definitions to be easier to understand
+    # rewrite definitions to be easier to understand [IN PROGRESS]
     # Control flow idea: use a for/while loop for wholeint <= 99 [IN PROGRESS]
         # see if there a better way to structure control logic starting with
         # if wholeint <= 99:
         # Add comments on definitions [IN PROGRESS]
-    # Change output to be more readable, i.e. 100 in written form is x
+    # Change output to be more readable, i.e. 100 in written form is x [DONE]
     # You entered statement negative symbol added [DONE]
 
 
@@ -137,5 +137,3 @@ elif isNegative == False:
     # Updated comments on lower program flow
     # Print statement left space "You Entered" [FIXED]
     # 0 input ---> incorrect/no output [FIXED]
-
-
