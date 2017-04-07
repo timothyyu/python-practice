@@ -6,8 +6,8 @@
 inputloop = True
 while inputloop is True:
     try:
-        hours = float(input("Enter hours:"))
-        rate = float(input("Enter pay rate per hour:"))
+        hours = float(input("Enter hours: "))
+        rate = float(input("Enter pay rate per hour: "))
         if hours <= 0 or rate <= 0:
             print("Both hour & rate values entered must be above 0 to calculate pay.")
             continue
@@ -29,7 +29,7 @@ def computepay (hours, rate):
     pay = str(pay).strip()
     return pay
 
-print("Pay : $" + computepay(hours,rate))
+print("Pay: $" + computepay(hours,rate))
 
 ## To implement:
     # If final pay beyond 0.00x decimal place, round up if >= 5 [DONE]
@@ -37,7 +37,7 @@ print("Pay : $" + computepay(hours,rate))
         # Can be accomplished with  print(round(computepay(hours, rate)2))
             #But how can I calcuate this myself (If I wanted to?)
     # Functions: Automatic deduction of 30 minutes meal time per day for 7.5+ shift
-        #more precision needed for daily entry of hours (in order to accurately calculate
+        #more precision needed for daily entry of hours (in order to accurately calculate with lunch time deductions)
 ## Bugs:
     # Final pay output formatting (when no cents/when only cents in decimal place)
     # location of dollar sign [FIXED]
