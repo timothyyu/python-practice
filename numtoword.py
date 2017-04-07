@@ -44,8 +44,7 @@ dict1 = {1: 'One', 2: 'Two', 3: 'Three', 4: 'Four', 5: 'Five',
             15: 'Fifteen', 16: 'Sixteen', 17: 'Seventeen', 18: 'Eighteen',
             19: 'Nineteen', 20: 'Twenty', 30: 'Thirty', 40: 'Forty',
             50: 'Fifty', 60: 'Sixty', 70: 'Seventy', 80: 'Eighty',
-            90: 'Ninety', 0: 'Zero',}
-dict2 = { 100:'Hundred', 1000: 'Thousand',}
+            90: 'Ninety', 0: 'Zero', 100: 'Hundred', 1000: 'Thousand',}
 
 ###############################################
 
@@ -75,17 +74,17 @@ def above101(wholeint):
     if tensleft == 0: # tensleft =! 0 in this case (tensleft = 51)
         numword = dict1[y] + " " + dict2[100]
     else:         #y=4          # hundred dict ref.    #51 passed to under100()
-        numword = dict1[y] +" "+ dict2[100] +" and " + under100(tensleft) #pass y + tensleft result into string
+        numword = dict1[y] +" "+ dict1[100] +" and " + under100(tensleft) #pass y + tensleft result into string
     return numword
 
 ###############################################
 
 if wholeint == 1000:
-    numword = dict1[1]+ " "+ dict2[wholeint]
+    numword = dict1[1]+ " "+ dict1[wholeint]
 elif wholeint >= 101:
     numword = above101(wholeint)
 elif wholeint == 100:
-    numword = dict1[1] +" " + dict2[wholeint]
+    numword = dict1[1] +" " + dict1[wholeint]
 elif wholeint <20: #or wholeint <=99 and not wholeint >=21: #Note: This line may be redundant as a limiter
     numword = dict1[wholeint]
 elif wholeint >=21:
