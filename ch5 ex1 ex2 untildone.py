@@ -1,4 +1,4 @@
-# Excercise 1, Ch. 5 Pg. 65, Python For Informatics v3
+# Excercise 1 and 2, Ch. 5 Pg. 65, Python For Informatics v3
 
 # Write a program which repeatedly reads numbers until the user enters
 # “done”. Once “done” is entered, print out the total, count, and average of the
@@ -20,4 +20,5 @@ while inputloop is True:
 avg = sum(lst) / len(lst)
 print ("Numbers entered: ", lst)
 print ("Sum, count of numbers entered, average: ", sum(lst),",",len(lst),",", avg) # sum, number of inputs, average
+print ("Smallest number: ",min(lst), "Largest number: ",max(lst))
 
