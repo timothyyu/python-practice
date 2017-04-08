@@ -18,8 +18,8 @@ while inputloop is True:
             print("Negative 0 is not a valid integer. Please Try again.")
             continue
         elif wholeint <0:
+            wholeint = abs(wholeint)  # taking advantage of absolute value for negative input parse
             isNegative = True
-            wholeint = abs(wholeint)
         elif wholeint >=0:
             isNegative = False
         running = False
@@ -29,10 +29,10 @@ while inputloop is True:
         print ("Please try again:")
 
 if isNegative == True:
-    # convert to string to get negative sign right next to number
+    # Use string to get negative sign right next to number
     # Use temp variable to not disrupt program flow
-    tempwholeint = str(wholeint)
-    print("Whole INT entered succesfully.\nYou entered:","-"+ tempwholeint)
+    tempwholeint = "-" + str(wholeint)  #tempwholeint = concatentation of - and wholeint as string
+    print("Whole INT entered succesfully.\nYou entered:",tempwholeint)
 elif isNegative == False:
     print("Whole INT entered succesfully.\nYou entered:",  wholeint)
 
@@ -111,22 +111,21 @@ elif wholeint >=21:
 #     elif wholeint == 90:
 #         numword = dict1[wholeint]
 
-# isNegative flag and abs() function to add "Negative" to negative input print statement
+# isNegative logic for output formatting:
 if isNegative == True:
-    print(wholeint, "in written form is:","Negative", numword)
+    print(tempwholeint, "in written form is:","Negative", numword)
 elif isNegative == False:
     print(wholeint, "in written form is:", numword)
 
 #To implement:
     # design for -1 and negative input [DONE]
     # rewrite definitions to be easier to understand [IN PROGRESS]
-    # Control flow idea: use a for/while loop for wholeint <= 99 [IN PROGRESS]
+    # Control flow idea: use a for/while loop for wholeint <= 99 [DONE]
         # see if there a better way to structure control logic starting with
         # if wholeint <= 99:
         # Add comments on definitions [IN PROGRESS]
     # Change output to be more readable, i.e. 100 in written form is x [DONE]
     # You entered statement negative symbol added [DONE]
-
 
 # Issues:
     # Final output has a space/few extra spaces left side of "You Entered:" [FIXED]
