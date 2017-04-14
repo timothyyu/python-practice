@@ -9,5 +9,11 @@
 str1 = 'X-DSPAM-Confidence:0.8475'
 slice1 = str1[(len(str1)-6):]
 slice1float =float(slice1)
-print (type(slice1float))
-print (slice1float)
+
+print ("Is the converted string a float:")
+if type(slice1float) == float:
+    print ("Yes")
+elif type(slice1float) is not float:
+    print ("Converted string is not float")
+
+print ("Sliced and converted string: %s" %slice1float)
