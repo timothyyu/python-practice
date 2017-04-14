@@ -23,4 +23,6 @@ def computegrade(score):
         return ('F')
 
 print (computegrade(score))
+# Same as above print statement, but using the format operator:
+# print ('%s' % computegrade(score))
 
