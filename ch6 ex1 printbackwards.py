@@ -1,3 +1,5 @@
+# Excercise 1, Ch. 6 Pg. 69, Python For Informatics v3
+
 # Exercise 1: Write a while loop that starts at the last character in the string and
 # works its way backwards to the first character in the string, printing each letter on
 # a separate line, except backwards.
@@ -12,12 +14,13 @@ def printreverse(s):
         print(s[index])
         index = index - 1
         count = count + 1
-#print(printreverse(teststring))
+
+printreverse(teststring)
 
 # Not as a function:
-index = len(teststring) - 1
-count = 0
-while count < len(teststring):
-    print(teststring[index])
-    index = index - 1
-    count = count + 1
+# index = len(teststring) - 1
+# count = 0
+# while count < len(teststring):
+#     print(teststring[index])
+#     index = index - 1
+#     count = count + 1
