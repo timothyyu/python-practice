@@ -12,11 +12,11 @@ teststring = "This is a test string"
 #
 # print(printreverse(teststring))
 
-print (len(teststring))
+#print (len(teststring))
 #print (teststring[20]) #0-20 is range
 
 index = 0
 while index < len(teststring):
     letter = teststring[index]
-    index = index +1
+    index = index -1
     print(letter)
