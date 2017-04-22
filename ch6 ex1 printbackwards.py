@@ -4,6 +4,7 @@
 
 teststring = "This is a test string"
 
+#as a function (not currently working)
 def printreverse(s):
     index = len(s) - 1
     count = 0
@@ -11,8 +12,12 @@ def printreverse(s):
         print(s[index])
         index = index - 1
         count = count + 1
+#print(printreverse(teststring))
 
-print(printreverse(teststring))
-
-
-
+# Not as a function:
+index = len(teststring) - 1
+count = 0
+while count < len(teststring):
+    print(teststring[index])
+    index = index - 1
+    count = count + 1
