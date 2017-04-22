@@ -4,10 +4,19 @@
 
 teststring = "This is a test string"
 
-def printreverse(s):
-   while index < len(s):
-       letter = s[index]
-       index = index +1
-   return letter
+# def printreverse(s):
+#    while index < len(s):
+#        index = index + 1
+#        letter = s[index]
+#    return letter
+#
+# print(printreverse(teststring))
 
-print(printreverse(teststring))
+print (len(teststring))
+#print (teststring[20]) #0-20 is range
+
+index = 0
+while index < len(teststring):
+    letter = teststring[index]
+    index = index +1
+    print(letter)
