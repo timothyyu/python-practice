@@ -4,7 +4,7 @@
 # in the previous exercise. Read the documentation of this method at
 # https://docs.python.org/3.5/library/stdtypes.html#string-methods and write an
 # invocation that counts the number of times the letter a occurs in “banana”
-
 b = "banana"
-b.count('a')
-'a' in b
+if "a" in b:
+    print("Yes")
+print(b.count('a'))
