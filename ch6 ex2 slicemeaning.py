@@ -4,3 +4,7 @@
 
 fruit = "bananna"
 print (fruit[:])
+
+# What does the following print statement output?
+# print print (fruit[3:3]) --> ''
+    # nothing is printed
