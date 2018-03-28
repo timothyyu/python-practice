@@ -18,8 +18,8 @@ while inputloop is True:
             print("Negative 0 is not a valid integer. Please Try again.")
             continue
         elif wholeint <0:
+            wholeint = abs(wholeint)  # taking advantage of absolute value for negative input parse
             isNegative = True
-            wholeint = abs(wholeint)
         elif wholeint >=0:
             isNegative = False
         running = False
@@ -29,10 +29,10 @@ while inputloop is True:
         print ("Please try again:")
 
 if isNegative == True:
-    # convert to string to get negative sign right next to number
+    # Use string to get negative sign right next to number
     # Use temp variable to not disrupt program flow
-    tempwholeint = str(wholeint)
-    print("Whole INT entered succesfully.\nYou entered:","-"+ tempwholeint)
+    tempwholeint = "-" + str(wholeint)  #tempwholeint = concatentation of - and wholeint as string
+    print("Whole INT entered succesfully.\nYou entered:",tempwholeint)
 elif isNegative == False:
     print("Whole INT entered succesfully.\nYou entered:",  wholeint)
 
@@ -44,8 +44,7 @@ dict1 = {1: 'One', 2: 'Two', 3: 'Three', 4: 'Four', 5: 'Five',
             15: 'Fifteen', 16: 'Sixteen', 17: 'Seventeen', 18: 'Eighteen',
             19: 'Nineteen', 20: 'Twenty', 30: 'Thirty', 40: 'Forty',
             50: 'Fifty', 60: 'Sixty', 70: 'Seventy', 80: 'Eighty',
-            90: 'Ninety', 0: 'Zero',}
-dict2 = { 100:'Hundred', 1000: 'Thousand',}
+            90: 'Ninety', 0: 'Zero', 100: 'Hundred', 1000: 'Thousand',}
 
 ###############################################
 
@@ -73,19 +72,19 @@ def above101(wholeint):
     y = x/100 # 400/100 = 4
     tensleft = wholeint - x # 451-400= 51
     if tensleft == 0: # tensleft =! 0 in this case (tensleft = 51)
-        numword = dict1[y] + " " + dict2[100]
+        numword = dict1[y] + " " + dict1[100]
     else:         #y=4          # hundred dict ref.    #51 passed to under100()
-        numword = dict1[y] +" "+ dict2[100] +" and " + under100(tensleft) #pass y + tensleft result into string
+        numword = dict1[y] +" "+ dict1[100] +" and " + under100(tensleft) #pass y + tensleft result into string
     return numword
 
 ###############################################
 
 if wholeint == 1000:
-    numword = dict1[1]+ " "+ dict2[wholeint]
+    numword = dict1[1]+ " "+ dict1[wholeint]
 elif wholeint >= 101:
     numword = above101(wholeint)
 elif wholeint == 100:
-    numword = dict1[1] +" " + dict2[wholeint]
+    numword = dict1[1] +" " + dict1[wholeint]
 elif wholeint <20: #or wholeint <=99 and not wholeint >=21: #Note: This line may be redundant as a limiter
     numword = dict1[wholeint]
 elif wholeint >=21:
@@ -112,22 +111,21 @@ elif wholeint >=21:
 #     elif wholeint == 90:
 #         numword = dict1[wholeint]
 
-# isNegative flag and abs() function to add "Negative" to negative input print statement
+# isNegative logic for output formatting:
 if isNegative == True:
-    print(wholeint, "in written form is:","Negative", numword)
+    print(tempwholeint, "in written form is:","Negative", numword)
 elif isNegative == False:
     print(wholeint, "in written form is:", numword)
 
 #To implement:
     # design for -1 and negative input [DONE]
     # rewrite definitions to be easier to understand [IN PROGRESS]
-    # Control flow idea: use a for/while loop for wholeint <= 99 [IN PROGRESS]
+    # Control flow idea: use a for/while loop for wholeint <= 99 [DONE]
         # see if there a better way to structure control logic starting with
         # if wholeint <= 99:
         # Add comments on definitions [IN PROGRESS]
     # Change output to be more readable, i.e. 100 in written form is x [DONE]
     # You entered statement negative symbol added [DONE]
-
 
 # Issues:
     # Final output has a space/few extra spaces left side of "You Entered:" [FIXED]

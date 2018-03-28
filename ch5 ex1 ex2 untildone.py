@@ -19,6 +19,6 @@ while inputloop is True:
         continue
 avg = sum(lst) / len(lst)
 print ("Numbers entered: ", lst)
-print ("Sum, count of numbers entered, average: ", sum(lst),",",len(lst),",", avg) # sum, number of inputs, average
-print ("Smallest number: ",min(lst), "Largest number: ",max(lst))
+print ("Sum, count of numbers entered, average: ", sum(lst), ",", len(lst),",", avg) # sum, number of inputs, average
+print ("Smallest number: ",min(lst), "Largest number: ", max(lst))
 
