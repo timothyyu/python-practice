@@ -13,6 +13,9 @@
 		# but not all functions are methods
 
 # Straight function
+	# block of code that is called by name
+		# can be passed parameters (data)
+		# can return values (return value)
 def straightSwitch(item1,item2):
 	return item2,item1
 
@@ -26,5 +29,21 @@ class SwitchClass(object):
 		return self.contents
 
 # in order to access methodSwitch(), instance or object needs to be defined:
+
+#instance declared of SwitchClass object
 instance =  SwitchClass()
+
+#method methodSwitch() called upon instance of the above object
 print(instance.methodSwitch(1,2))
+
+
+# functions ---> data is explicitly passed
+# methods ---> data is implicitly passed
+# classes ---> are blueprints for creating objects
+
+# function arguments
+	# default, required, keyword, and variable number arguments
+	# default: take a specified default value if no arguement is passed during the call
+	# required: need to be passed during call in specific order
+	# keyword: identify arguments by parameter name to call in specified order
+	# variable argument: *args (used to accept a variable number of arguements)
