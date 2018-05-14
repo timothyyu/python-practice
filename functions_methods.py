@@ -47,3 +47,9 @@ print(instance.methodSwitch(1,2))
 	# required: need to be passed during call in specific order
 	# keyword: identify arguments by parameter name to call in specified order
 	# variable argument: *args (used to accept a variable number of arguements)
+
+#P4E 14.4
+#Examining the methods of an object using the dir() function:
+	#dir() lists the methods and attributes of a python object
+stuff = list()
+print(dir(stuff))
