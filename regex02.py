@@ -62,35 +62,79 @@ l = list()
 
 # Search for lines that have an at sign between characters
 # The characters must be a letter or number
-# The results will be slightly more accurate than re07.py for email addresses
+# The results will be slightly more accurate than atSymbolNumChar/re07.py for email address
+def atSymbolNumCharAcc(file):
+    hand = open(file)
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('[a-zA-Z0-9\-.]\S+@[a-zA-Z0-9].\S+[a-zA-Z]', line)
+        if len(x) > 0:
+            #print(x)
+            l.append(x)
+    #print(l)
 
-# def atSymbolNumCharAcc():
-hand = open(file)
-for line in hand:
-    line = line.rstrip()
-    x = re.findall('[a-zA-Z0-9\-.]\S+@[a-zA-Z0-9].\S+[a-zA-Z]', line)
-    if len(x) > 0:
-        #print(x)
-        l.append(x)
-#print(l)
+    # Lists are mutable = therefore not hashable
+        # list ---> tuple ----> set ---> list
+    mat = [tuple(t) for t in l]
+    matset = set(mat)
+    matset_l= [list(t) for t in matset]
+    # New Python 3.x way to print list elements on new lines 
+        # requires from __future__ import print_function 
+    print(*matset_l,sep='\n')
 
+# Remove email addresses that start with a number
+# and have a period 13 characters in
+#for item in matset_l:
+    #if item[0][0].isdigit() and item[0][12] == '.':
+        #print(item)
+        #matset_l.del(item)
 
-# Lists are mutable = therefore not hashable
-    # list ---> tuple ----> set ---> list
-mat = [tuple(t) for t in l]
-matset = set(mat)
-matset_l= [list(t) for t in matset]
-print(matset_l)
+# Search for lines that start 'X' followed by any non whitespace
+# characters and ':' then output the first group of non whitespace
+# characters that follows
+def xNonWhiteSpace(file):
+    hand = open(file)
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('^X\S*: (\S+)', line)
+        if not x: continue
+        print(x)
 
-# New Python 3.x way to print list elements on new lines 
-    # requires from __future__ import print_function 
-print(*matset_l,sep='\n')
+# Search for lines that start with 'X' followed by any non
+# whitespace characters and ':'
+# followed by a space and any number.
+# The number can include a decimal.
+# For sample file mbox-short.txt, this outputs the X-DSPAM-Probality and confidence:
+def xNWSnumCharFollow(file):
+    hand = open(file)
+    for line in hand:
+        line = line.rstrip()
+        if re.search('^X\S*: [0-9.]+', line):
+            print(line)
 
-### Main function calls for regex funcaccess list valuestion expression tests ###
+# Search for lines that start with 'X' followed by any
+# non whitespace characters and ':' followed by a space
+# and any number. The number can include a decimal.
+# Then print the number if it is greater than zero.
+# For sample file mbox-short.txt, this outputs the same numeric portion of the above
+def xNWSnumCharFollowZero(file):
+    hand = open(file)
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('^X\S*: ([0-9.]+)', line)
+        if len(x) > 0:
+            print(x)
 
-#fromLines(file)
-#atSymbol(file)
+##########################################################
+
+### Main function calls for regex functions ###
+xNWSnumCharFollowZero(file)
+#xNWSnumCharFollow(file)
+#xNonWhiteSpace(file)
+#atSymbolNumCharAcc(file)
 #atSymbolNumChar(file)
+#atSymbol(file)
+#fromLines(file)
 
 ##########################################################
 
@@ -104,4 +148,4 @@ print(*matset_l,sep='\n')
         # Using list, loop to not add item if already in list (checks if already in list/unique)
         # Using OrderedDict
         
-# re09.py - re15.py examples
+# Go through re012.py - re15.py examples
