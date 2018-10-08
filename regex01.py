@@ -20,3 +20,12 @@ if re.search('^T\S+:',z):
 numstring = "This is This 1 2, 3, 3, 5, 6,7,8,9"
 numfound = re.findall('[0-9]+',numstring)
 print(numfound)
+
+# Non-greedy vs greedy example: 
+x = "From: Using the : character"
+y = re.findall("^F.+:",x)
+    # "+" is repeat charyacter, greedy
+y2 = re.findall("^F.+:?",x)
+    # "+?" is repeat character, non-greedy
+print(y)
+print(y2)

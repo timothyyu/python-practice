@@ -125,10 +125,62 @@ def xNWSnumCharFollowZero(file):
         if len(x) > 0:
             print(x)
 
+# Search for lines that start with 'Details: rev='
+# followed by numbers and '.'
+# Then print the number if it is greater than zero
+def revNumZero(file):
+    hand = open(file)
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('^Details:.*rev=([0-9.]+)', line)
+        if len(x) > 0:
+            print(x)
+
+# Search for lines that start with From and a character
+# followed by a two digit number between 00 and 99 followed by ':'
+# Then print the number if it is greater than zero
+def fromCharTwoNum(file):
+    hand = open(file)
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('^From .* ([0-9][0-9]):', line)
+        if len(x) > 0: print(x)
+
+# Search for lines that contain 'Author:' followed by any characters,
+# an at sign, and any non whitespace character
+# Then print the character group that follows the at sign
+def authorCharAtSign(file):
+    hand = open(file)
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('Author:.*@(\S+)', line)
+        if not x: continue
+        print(x)
+
+# Search for lines that contain 'New Revision: ' followed by a number
+# Then turn the number into a float and append it to nums
+# Finally print the length and the average of nums
+def newRevNumsLengthAvg(file):
+    hand = open(file)
+    nums = list()
+    for line in hand:
+        line = line.rstrip()
+        x = re.findall('New Revision: ([0-9]+)', line)
+        if len(x) == 1:
+            val = float(x[0])
+            nums.append(val)
+    print("Length:", len(nums))
+    print("Average of nums:", sum(nums)/len(nums))
+
 ##########################################################
 
 ### Main function calls for regex functions ###
-xNWSnumCharFollowZero(file)
+
+#newRevNumsLengthAvg(file)
+#authorCharAtSign(file)
+#fromCharTwoNum(file)
+#revNumZero(file)
+#xNWSnumCharFollowZero(file)
 #xNWSnumCharFollow(file)
 #xNonWhiteSpace(file)
 #atSymbolNumCharAcc(file)
@@ -147,5 +199,3 @@ xNWSnumCharFollowZero(file)
             # can't create set from list of lists (output of l is list of lists)
         # Using list, loop to not add item if already in list (checks if already in list/unique)
         # Using OrderedDict
-        
-# Go through re012.py - re15.py examples
