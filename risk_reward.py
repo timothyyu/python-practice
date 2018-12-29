@@ -8,9 +8,12 @@ print("enter, exit, stop")
 #enter, exit, stop = input().split()
 
 # Test placeholder for enter, exit, stop
-enter, exit, stop = 123,160, 75 
+#enter, exit, stop = 123,160, 75 
 
-#enter, exit, stop = 3676.0, 3476.0, 3818.0 
+enter, exit, stop = 3676.0, 3476.0, 3818.0 
+#enter, exit, stop = 3676.0, 4102.0, 3818.0 
+    # works
+#enter, exit, stop = 3676.0, 3476.0, 3760.0 
 
 #enter, exit, stop = 3676.0, 3250.0, 3610.0
 #enter, exit, stop = 3676.0, 3250.0, 3742.66 
@@ -43,24 +46,23 @@ print("SL%:   {:.2f} %".format(sl_p))
 print("RR:    {:.2f}".format(rr))
 
 if (rr <= 3):
-    if exit < enter:
+    #SHORT
+    if enter > exit:
         print("RR is not > 3!")
         new_exit = abs((((3.0 * sl) * enter))-enter)
         print("new exit to have RR of 3:")
         print(new_exit)
-        new_stop = ((enter *(pt/3.0))+enter)
+        new_stop = abs(((enter *(pt/3.0))+enter))
         print("new stop to have RR of 3:")
-
         print(new_stop)
-
-    if exit > enter:
+    #LONG
+    if enter < exit:
         print("RR is not > 3!")
         new_exit = abs((((3.0 * sl) * enter))+enter)
         print("new exit to have RR of 3:")
         print(new_exit)
-        new_stop = abs(((enter *(pt/3.0))-enter))
+        new_stop = abs(((enter *(pt/3.0))+enter))
         print("new stop to have RR of 3:")
-
         print(new_stop)
 #removed order size parameter (for now) - optional pass parameter (later)
 
