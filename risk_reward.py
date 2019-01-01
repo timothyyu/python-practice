@@ -66,7 +66,27 @@ if (rr < 3):
         new_stop = abs(((enter *(reward/3.0))-enter))
         print("new stop for RR of 3:")
         print(new_stop)
-        
+
+rrPass = False
+target_rr = 5 
+if rrPass is True:
+    print(f"target_rr: {target_rr}")
+    #SHORT
+    if enter > exit: 
+        new_exit = abs((((target_rr * risk) * enter))-enter)
+        print(f"new exit for RR of {target_rr}:")
+        print(new_exit)
+        new_stop = abs(((enter *(reward/target_rr))+enter))
+        print(f"new stop for RR of {target_rr}:")
+        print(new_stop)
+    #LONG
+    if enter < exit:
+        new_exit = abs((((target_rr * risk) * enter))+enter)
+        print(f"new exit for RR of {target_rr}:")
+        print(new_exit)
+        new_stop = abs(((enter *(reward/target_rr))-enter))
+        print(f"new stop for RR of {target_rr}:")
+        print(new_stop)       
 # removed order size parameter (for now) - optional pass parameter (later)
 # https://www.bitmex.com/app/orderTypeFAQ
 # https://www.bitmex.com/app/fairPriceMarking
