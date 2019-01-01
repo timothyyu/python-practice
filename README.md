@@ -1,2 +1,2 @@
-# p4e
-p4e-prac
+# python-prac
+repository for practice of python concepts and structures
