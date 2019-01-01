@@ -5,24 +5,24 @@
 print("Enter values seperated via space:")
 print("enter, exit, stop")
 
-#enter, exit, stop = input().split()
+enter, exit, stop = input().split()
 
-### placeholders for enter, exit, stop testing ##
+### Unit test - placeholders for enter, exit, stop testing ##
 
-# Long test
+### Long test ###
 #enter, exit, stop = 123,160, 75 
 # exit test
 #enter, exit, stop = 123,267, 75 
 # stop test
 #enter, exit, stop = 123,160, 111
 
-# Short test
-enter, exit, stop = 3676.0, 3476.0, 3818.0 
+### Short test ###
+#enter, exit, stop = 3676.0, 3476.0, 3818.0 
 # exit test
 #enter, exit, stop = 3676.0, 3250.0, 3818.0 
 # stop test
 #enter, exit, stop = 3676.0, 3476.0, 3742.66 
-
+print("Values entered for enter, exit, stop:")
 print(enter, exit, stop ,"\n")
 
 if exit > enter:
@@ -35,7 +35,7 @@ enter, exit, stop = list(map(float,[enter, exit, stop]))
 
 print("Enter:", enter)
 print("Exit: ", exit)
-print("Stop: ",stop)
+print("Stop: ", stop)
 
 pt =  abs((exit-enter)/ (enter))
 sl = abs((stop-enter)/ (enter)) 
@@ -67,8 +67,8 @@ if (rr <= 3):
         print("new stop to have RR of 3:")
         print(new_stop)
         
-#removed order size parameter (for now) - optional pass parameter (later)
-#https://www.bitmex.com/app/orderTypeFAQ
-#https://www.bitmex.com/app/fairPriceMarking
-#https://www.bitmex.com/app/pnlGuide#Example-4-Realised-PNL-Accounting
+# removed order size parameter (for now) - optional pass parameter (later)
+# https://www.bitmex.com/app/orderTypeFAQ
+# https://www.bitmex.com/app/fairPriceMarking
+# https://www.bitmex.com/app/pnlGuide#Example-4-Realised-PNL-Accounting
 
