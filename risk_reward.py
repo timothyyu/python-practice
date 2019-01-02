@@ -1,6 +1,6 @@
 # 3. "Find something you need to calculate and write a new .py file that does it." p. 44
 
-### Risk reward calc with enter-size-exit-stop ###
+### Risk reward calc with enter-exit-stop ###
 
 print("Enter values seperated via space:")
 print("enter, exit, stop")
@@ -10,12 +10,12 @@ print("enter, exit, stop")
 ### Unit test - placeholders for enter, exit, stop testing ##
 ### Long test ###
 ## exit test
-#enter, exit, stop = 123, 267, 75 
+#enter, exit, stop = 123, 160, 75 
 # stop test
-#enter, exit, stop = 123, 160, 111
+enter, exit, stop = 123, 160, 111
 
 ### Short test ###
-enter, exit, stop = 3676.0, 3476.0, 3818.0 
+#enter, exit, stop = 3676.0, 3476.0, 3818.0 
 # exit test
 #enter, exit, stop = 3676.0, 3250.0, 3818.0 
 # stop test
@@ -92,3 +92,14 @@ if rrPass is True:
 # https://www.bitmex.com/app/fairPriceMarking
 # https://www.bitmex.com/app/pnlGuide#Example-4-Realised-PNL-Accounting
 
+# Edgewonk Math Cheatsheet ref:
+    # https://www.tradeciety.com/wp-content/uploads/Math.pdf
+# Minimum Winrate = 1 / (1 + Reward:Risk)
+    # historical winrate --> minimum reward:risk ratio
+    # 25% --> 3:1
+    # 33% --> 2:1
+    # 40% --> 1.5:1
+    # 60 --> 0.7:1
+    # 75% --> 0.3:1
+minimum_winrate = 1 / ( 1 + rr)
+print("Minimum winrate: {:.2f}%".format(minimum_winrate*100 ))
