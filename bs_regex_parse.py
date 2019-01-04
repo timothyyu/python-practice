@@ -6,7 +6,7 @@ match = re.findall('https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+', string)
 
 html = Soup(string, 'html.parser')    
 bsm=  [a['href'] for a in html.find_all('a')]
-match2 = re.findall('"http.*.*"',string)
+match2 = re.findall('"(http.*.*)"',string)
 
 print(match)
 print(match2)
