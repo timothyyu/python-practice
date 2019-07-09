@@ -1,4 +1,4 @@
-#ex 8 p. 60-61
+#ex 8 p. 60-61 printing, printing
 
 formatter = " {} {} {} {}"
 

@@ -1,4 +1,4 @@
-# p.52 ex6
+# p.52 ex6 strings and text
 
 # Set types_of_people to 10
 types_of_people = 10

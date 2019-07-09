@@ -1,4 +1,6 @@
-# 3. "Find something you need to calculate and write a new .py file that does it." p. 44
+#p.43 ex3 numbers and math
+#sd3 p.44:
+# "Find something you need to calculate and write a new .py file that does it."
 
 ### Risk reward calc with enter-exit-stop ###
 

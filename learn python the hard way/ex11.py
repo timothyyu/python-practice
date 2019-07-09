@@ -1,4 +1,4 @@
-#p68-69 ex 11
+#p68-69 ex 11 asking questions
 
 print("How old are you?", end=' ')
 age=input()

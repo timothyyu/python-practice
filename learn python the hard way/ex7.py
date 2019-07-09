@@ -1,4 +1,4 @@
-#ex7 p.57
+#ex7 p.57 more printing
 
 print("Mary had a little lamb.")
 

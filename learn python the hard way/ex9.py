@@ -1,4 +1,4 @@
-#p.62 ex9
+#p.62 ex9 printing, printing, printing
 
 days = "Mon Tue Wed Thru Fri Sat Sun"
 months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"

@@ -1,4 +1,4 @@
-# p.50 ex5
+# p.50 ex5 more variables and printing
 
 name = 'Zed A. Shaw'
 age = 35 

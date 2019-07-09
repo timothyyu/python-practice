@@ -1,4 +1,4 @@
-#p68-69 ex 11
+#p68-69 ex12 prompting peolke
 
 age = input("How old are you? ")
 height = input("How tall are you? ")

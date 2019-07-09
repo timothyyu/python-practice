@@ -1,4 +1,4 @@
-#p.64 ex10
+#p.64 ex10 what was that
 
 # Escape sequence 	
 	# escape double-quotes and single-quotes so python knows to include them in the string
