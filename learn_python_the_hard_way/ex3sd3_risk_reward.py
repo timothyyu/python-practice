@@ -7,14 +7,14 @@
 print("Enter values seperated via space:")
 print("enter, exit, stop")
 
-#enter, exit, stop = input().split()
+enter, exit, stop = input().split()
 
 ### Unit test - placeholders for enter, exit, stop testing ##
 ### Long test ###
 ## exit test
 #enter, exit, stop = 123, 160, 75 
 # stop test
-enter, exit, stop = 123, 160, 111
+# enter, exit, stop = 123, 160, 111
 
 ### Short test ###
 #enter, exit, stop = 3676.0, 3476.0, 3818.0 
