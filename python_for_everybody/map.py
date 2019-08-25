@@ -5,7 +5,6 @@
 l = [1,2,3]
 
 #float(l) 
-
 # Results in error: 
 	# TypeError: float() argument must be a string or a number, not 'list'
 
