@@ -31,3 +31,6 @@ print("Here is a puzzle:")
 what = (add(age,subtract(height,multiply(weight,divide(iq,2)))))
 print(f"That becomes {what} Can you do it by hand?")
 
+# figure out the nromal formula that would recreate this same set of operations without nested return function chain calls
+what_normal_formula = age + (height-((iq/2) * weight))
+print(f"normal formula version result: {what_normal_formula } ")
