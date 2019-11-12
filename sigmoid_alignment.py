@@ -1,3 +1,4 @@
+# # https://www.geeksforgeeks.org/implement-sigmoid-function-using-numpy/
 import copy
 import numpy as np
 np.random.seed(0)
