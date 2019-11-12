@@ -1,5 +1,6 @@
 # https://iamtrask.github.io/2015/11/15/anyone-can-code-lstm/
 # https://www.geeksforgeeks.org/implement-sigmoid-function-using-numpy/
+# https://machinelearningmastery.com/implement-perceptron-algorithm-scratch-python/
 import copy
 import numpy as np
 np.random.seed(0)
