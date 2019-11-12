@@ -23,9 +23,21 @@ import math
 x =1
 
 x = [-1,0,0.5,1]
+# x = [-1.33,0.33,0.533,1.33]
 # z = 1/(1 + np.exp(-x)) 
+
+# for val in x:
+#     print(val,sigmoid(val))
+
 for val in x:
-    print(val,sigmoid(val))
+    print(val,sigmoid(val),sigmoid_output_to_derivative(sigmoid(val)))
+
+
+
+# 1 0.7310585786300049
+# 0.5 0.6224593312018546
+# 0 0.5
+# -1 0.2689414213699951
 
 # plt.plot(x, z) 
 # plt.xlabel("x") 
